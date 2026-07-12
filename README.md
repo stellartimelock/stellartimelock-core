@@ -1,6 +1,11 @@
 # stellartimelock-core
 
-**Open-source security modules powering the [Stellar TimeLock](https://github.com/StellarTimeLock) mobile wallet.**
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
+[![Release](https://img.shields.io/github/v/release/StellarTimeLock/stellartimelock-core?display_name=tag&sort=semver)](https://github.com/StellarTimeLock/stellartimelock-core/releases)
+[![Platform](https://img.shields.io/badge/platform-Android_%7C_iOS-lightgrey.svg)](#)
+[![Security policy](https://img.shields.io/badge/security-policy-brightgreen.svg)](./SECURITY.md)
+
+**Open-source security modules powering the Stellar TimeLock mobile wallet.**
 
 Copyright © 2026 Stellar TimeLock LLC — licensed under Apache License 2.0
 (see [`LICENSE`](./LICENSE)).

@@ -12,6 +12,10 @@ If you find a vulnerability, please **do not** open a public GitHub
 issue. Email `Stellartimelock@Gmail.com` with a description and
 reproduction steps. We aim to acknowledge reports within 72 hours.
 
+The canonical home for this document (and the four security modules
+it describes) is
+[`github.com/StellarTimeLock/stellartimelock-core`](https://github.com/StellarTimeLock/stellartimelock-core).
+
 ---
 
 ## 1. Threat model
