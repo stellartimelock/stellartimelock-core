@@ -69,6 +69,10 @@ the design of each module, and the known limitations.
 | [`src/security/session-keystore.ts`](./src/security/session-keystore.ts) | Session-scoped wallet-seed cache with Android Keystore / iOS Keychain-bound persistence. One biometric prompt per unlock. |
 | [`src/security/biometric.ts`](./src/security/biometric.ts) | Biometric enrolment, hardware-gated root-secret storage, and HKDF-SHA-256 key derivation for the notebook AES key. |
 | [`src/notebook/crypto.ts`](./src/notebook/crypto.ts) | AES-256-CBC envelope encryption for notes, bills, ledger entries, TOTP secrets, and address book. PBKDF2 KDF from the wallet seed. |
+| [`src/wallet/horizon.ts`](./src/wallet/horizon.ts) | Stellar Horizon client — account balance, spendable-balance protocol math, transaction history, payment lookups. Read-only, on-chain public data only. |
+| [`src/api/soroban-client.ts`](./src/api/soroban-client.ts) | Soroban RPC write client for the deployed XlmVault contract — vault creation, deposit, withdraw, and unlock-date extension. All calls verifiable on stellar.expert. |
+| [`src/api/soroban-errors.ts`](./src/api/soroban-errors.ts) | Structured error decoding for the build → simulate → submit → poll pipeline. Maps Soroban ScVal error codes to human-readable diagnostics. |
+| [`backend/changelly.py`](./backend/changelly.py) | Changelly instant-swap integration (FastAPI). Signed JSON-RPC requests, partner attribution, quote + createTransaction flows. Publicly-inspectable HTTP surface — no proprietary logic. |
 | [`SECURITY.md`](./SECURITY.md) | Full threat model + subsystem design writeup. Please read before filing any vulnerability report. |
 | [`LICENSE`](./LICENSE) | Apache License, Version 2.0. |
 
