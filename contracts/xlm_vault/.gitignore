@@ -1,0 +1,4 @@
+# Build artefacts
+target/
+# Deployer secrets — NEVER commit
+.deploy/

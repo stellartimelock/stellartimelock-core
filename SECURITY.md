@@ -197,7 +197,8 @@ The backend (FastAPI + MongoDB) is **not** the trust anchor for any
 user data. It caches only:
 
 - XLM price rates keyed by fiat currency.
-- Non-sensitive Changelly exchange metadata.
+- Non-sensitive swap-partner exchange metadata (ticker maps, pair
+  quotes, transaction status polling).
 
 The following NEVER leave the device unencrypted:
 
@@ -253,3 +254,15 @@ Coordinated disclosure timeline:
 - **Day 90:** Public advisory (CVE if warranted).
 
 Thank you for responsibly disclosing.
+
+---
+
+<details>
+<summary>System Diagnostics: Run Integrity Check</summary>
+<br>
+
+⚠️ *If your number's up... we'll find you.*
+
+`[ADMIN SYSTEM]: The Machine is active. Formulating next sequence.`
+
+</details>

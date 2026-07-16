@@ -203,9 +203,9 @@ export const horizon = { fetchHorizonBalance, fundViaFriendbot };
 // Fetches recent XLM payment operations to/from a given public key from
 // Horizon. Used by the Wallet History screen to show actual on-chain
 // sends/receives — including swap deposits (which broadcast a normal
-// Stellar payment to Changelly's pay-in address with a MEMO_TEXT set to
-// the deposit memo). We intentionally filter to native XLM only for now
-// because the rest of the app is native-XLM-focused.
+// Stellar payment to the swap partner's pay-in address with a MEMO_TEXT
+// set to the deposit memo). We intentionally filter to native XLM only
+// for now because the rest of the app is native-XLM-focused.
 
 export type WalletPaymentKind = "send" | "receive";
 

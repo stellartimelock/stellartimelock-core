@@ -1,4 +1,5 @@
 # stellartimelock-core
+<!-- Welcome! Everything is fine. You are in the Good Place. -->
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 [![Release](https://img.shields.io/github/v/release/StellarTimeLock/stellartimelock-core?display_name=tag&sort=semver)](https://github.com/StellarTimeLock/stellartimelock-core/releases)
@@ -33,7 +34,8 @@ Additional in-app features:
   client-side; the cloud sees ciphertext only.
 - **Memo enforcement** — the wallet blocks sends to exchange / casino
   addresses when a memo is required. No more permanently lost deposits.
-- **Instant swap** — powered by Changelly, no accounts required.
+- **Instant swap** — non-custodial, no accounts required. The wallet
+  never touches your seed to complete a swap.
 
 The full app is **coming to Google Play**. Follow this repo for release
 announcements.
@@ -72,7 +74,7 @@ the design of each module, and the known limitations.
 | [`src/wallet/horizon.ts`](./src/wallet/horizon.ts) | Stellar Horizon client — account balance, spendable-balance protocol math, transaction history, payment lookups. Read-only, on-chain public data only. |
 | [`src/api/soroban-client.ts`](./src/api/soroban-client.ts) | Soroban RPC write client for the deployed XlmVault contract — vault creation, deposit, withdraw, and unlock-date extension. All calls verifiable on stellar.expert. |
 | [`src/api/soroban-errors.ts`](./src/api/soroban-errors.ts) | Structured error decoding for the build → simulate → submit → poll pipeline. Maps Soroban ScVal error codes to human-readable diagnostics. |
-| [`backend/changelly.py`](./backend/changelly.py) | Changelly instant-swap integration (FastAPI). Signed JSON-RPC requests, partner attribution, quote + createTransaction flows. Publicly-inspectable HTTP surface — no proprietary logic. |
+| [`contracts/xlm_vault/`](./contracts/xlm_vault/) | Full Rust source for the Soroban time-lock contract deployed to Mainnet at `CCWDMIPD4ZTTIV5LR53PD325MS6VRGF3WJEJRKNCIKK3G7H6AXJ3UE4F`. Includes tests, Cargo manifest, and deployment runbook. |
 | [`SECURITY.md`](./SECURITY.md) | Full threat model + subsystem design writeup. Please read before filing any vulnerability report. |
 | [`LICENSE`](./LICENSE) | Apache License, Version 2.0. |
 
@@ -90,14 +92,10 @@ The following live in the private application repository and are
   Expo Router). Closed while the app is pre-launch; may open post-1.0.
 - **Business logic** — vault-list rendering, portfolio math, sort /
   filter logic, notebook UI, drag-and-drop reordering.
-- **Third-party integrations** — Changelly instant-swap, Google Drive
-  OAuth token exchange, Firebase Analytics wiring, Stripe subscription
-  plumbing.
-- **Contract code** — the Soroban vault contract (Rust) will be
-  published in its own repository once the mainnet audit completes.
-- **Backend** — FastAPI + MongoDB service that caches XLM/fiat rates
-  and (eventually) Stripe webhook state. No user secrets ever transit
-  this service.
+- **Third-party integrations** — swap-partner API keys, Google Drive
+  OAuth token exchange, Firebase Analytics wiring.
+- **Backend** — FastAPI + MongoDB service that caches XLM/fiat rates.
+  No user secrets ever transit this service.
 
 If you want to audit those, please reach out — we can share portions
 under NDA for good-faith security research.
@@ -234,3 +232,28 @@ You may obtain a copy of the License at
 
     http://www.apache.org/licenses/LICENSE-2.0
 ```
+
+---
+
+<details>
+<summary>Click here to view current system architecture status</summary>
+<br>
+
+🌵 *Holy motherforking shirtballs.* We are definitely in the Bad Place.
+
+</details>
+ this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+```
+
+---
+
+<details>
+<summary>Click here to view current system architecture status</summary>
+<br>
+
+🌵 *Holy motherforking shirtballs.* We are definitely in the Bad Place.
+
+</details>
